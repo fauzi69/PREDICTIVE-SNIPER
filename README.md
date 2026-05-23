@@ -50,39 +50,65 @@ graph TD;
     F -->|Yes| G[WEB3_EXECUTION];
     F -->|No| H[Skip / Continue Loop];
     G -->|Sign Tx| I[(Polygon Network)];
+```
 
-🛠 Tech Stack
-Component	Technology	Description
-AI Engine	Xiaomi Mimo AI	Primary LLM for Probability Inference
-Blockchain	Web3.py	Smart Contract interaction & Tx signing
-Ingestion	Feedparser / Asyncio	Low-latency RSS stream processing
-Network	HTTPX	Asynchronous API client for LLM routing
-Environment	Python 3.10+	Core execution environment (Linux/VPS)
-🚀 Quick Start
-1. Clone the Repository
-code
-Bash
+---
+
+## 🛠 Tech Stack
+
+| Component | Technology | Description |
+|-----------|-----------|-------------|
+| AI Engine | Xiaomi Mimo AI | Primary LLM for Probability Inference |
+| Blockchain | Web3.py | Smart Contract interaction & Tx signing |
+| Ingestion | Feedparser / Asyncio | Low-latency RSS stream processing |
+| Network | HTTPX | Asynchronous API client for LLM routing |
+| Environment | Python 3.10+ | Core execution environment (Linux/VPS) |
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/fauzi69/PREDICTIVE-SNIPER.git
 cd PREDICTIVE-SNIPER
-2. Install Dependencies
+```
+
+### 2. Install Dependencies
+
 Make sure you have Python 3.10 or higher installed.
-code
-Bash
+
+```bash
 pip install -r requirements.txt
-3. Setup Environment Variables
-Create a .env file in the root directory and configure your keys. Never commit your private keys!
-code
-Bash
+```
+
+### 3. Setup Environment Variables
+
+Create a `.env` file in the root directory and configure your keys. Never commit your private keys!
+
+```bash
 cp .env.example .env
-4. Run the Daemon
-code
-Bash
+```
+
+### 4. Run the Daemon
+
+```bash
 python main.py
-Tip: For production deployment on a VPS, run it in the background using nohup python main.py > logs/sniper.log 2>&1 &
-⚙️ Environment Variables
-To run this project, you will need to add the following environment variables to your .env file:
-code
-Env
+```
+
+**Tip:** For production deployment on a VPS, run it in the background using:
+```bash
+nohup python main.py > logs/sniper.log 2>&1 &
+```
+
+---
+
+## ⚙️ Environment Variables
+
+To run this project, you will need to add the following environment variables to your `.env` file:
+
+```env
 # 🛡️ WEB3 CONFIG
 PRIVATE_KEY=your_polygon_wallet_private_key
 POLYGON_RPC=https://polygon-rpc.com/
@@ -93,17 +119,29 @@ MIMO_BASE_URL=https://api.xiaomimimo.com/v1
 
 # 🔄 FALLBACK CONFIG (Optional)
 GROQ_API_KEY=your_groq_api_key
-🤝 Why Xiaomi Mimo AI?
+```
+
+---
+
+## 🤝 Why Xiaomi Mimo AI?
+
 In predictive arbitrage, speed and reasoning are everything.
+
 Traditional cloud models often suffer from latency spikes or rate limits. By using Xiaomi Mimo Platform, this agent benefits from:
-Unmatched Latency: Crucial for executing trades before the market reacts to breaking news.
-Deep Contextual Understanding: Ability to digest complex geopolitical news and output a strict, mathematically viable floating-point probability.
-Developer-Friendly API: Seamless integration with standard OpenAI-compatible SDKs.
-⚠️ Disclaimer
-Not Financial Advice (NFA).
+
+- **Unmatched Latency:** Crucial for executing trades before the market reacts to breaking news.
+- **Deep Contextual Understanding:** Ability to digest complex geopolitical news and output a strict, mathematically viable floating-point probability.
+- **Developer-Friendly API:** Seamless integration with standard OpenAI-compatible SDKs.
+
+---
+
+## ⚠️ Disclaimer
+
+**Not Financial Advice (NFA).**
+
 This software is built for educational and hackathon/grant demonstration purposes only. Prediction markets involve significant risk. The developers are not responsible for any financial losses incurred while running this autonomous agent. Always test with a small amount of funds and use a dedicated burner wallet.
+
 <div align="center">
 <br>
 <i>Built for the Future of Decentralized Finance.</i>
 </div>
-```
