@@ -1,5 +1,5 @@
-web3
-httpx
-feedparser
-python-dotenv
-openai
+web3>=6.0.0
+httpx>=0.25.0
+feedparser>=6.0.0
+python-dotenv>=1.0.0
+openai>=1.0.0
